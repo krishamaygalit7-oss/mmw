@@ -162,7 +162,7 @@ function showRound() {
   showSlots();
 }
 
-function answer(value) {
+window.answer = function(value) {
   if (value === rounds[current].correct) {
     letters[current] = rounds[current].letter;
     score += 10;
@@ -186,7 +186,7 @@ function answer(value) {
     document.getElementById("feedback").textContent =
       "Not quite! Try another answer.";
   }
-}
+};
 
 function checkWord() {
   const guess = document.getElementById("guess").value.trim().toUpperCase();
